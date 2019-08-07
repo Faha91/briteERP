@@ -1,16 +1,17 @@
-package Pages;
+package briteERP.pages;
 
-import Utilities.Driver;
-import Utilities.TestBase;
+import briteERP.utilities.BasePage;
+import briteERP.utilities.Driver;
+import briteERP.utilities.TestBase;
+import org.jsoup.Connection;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends TestBase {
-    private static WebDriver driver = Driver.getDriver();
-    public Actions action;
+public class LoginPage extends BasePage {
+    ;
 
     @FindBy(xpath = "//*[@class='form-control' and @name  = 'login']")
     public WebElement loginLocator;
@@ -23,7 +24,7 @@ public class LoginPage extends TestBase {
 
 
     public LoginPage(){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     public void login (String username, String password){

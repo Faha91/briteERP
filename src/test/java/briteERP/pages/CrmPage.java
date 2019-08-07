@@ -1,17 +1,16 @@
-package Pages;
+package briteERP.pages;
 
-import Utilities.Driver;
+import briteERP.utilities.BasePage;
+import briteERP.utilities.Driver;
+import org.jsoup.Connection;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CrmPage {
+public class CrmPage extends BasePage {
 
-    private static WebDriver driver = Driver.getDriver();
-    public static Actions action;
 
     @FindBy(xpath = "//*[@class = \'oe_menu_text\' and contains(text(), \'CRM\')]")
     public WebElement crmlocator;
@@ -57,9 +56,5 @@ public class CrmPage {
 
     @FindBy(xpath = "//tbody/tr[1]/td[2]")
     public WebElement pivotTableTotalLocator;
-
-    public CrmPage(){
-        PageFactory.initElements(driver,this);
-    }
 
 }
