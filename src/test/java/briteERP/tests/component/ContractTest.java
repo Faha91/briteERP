@@ -8,6 +8,7 @@ public class ContractTest {
     @Test
     public void Test1(){
         System.out.println("driver open vytrcak" +faker.chuckNorris().fact());
+        System.out.println(faker.chuckNorris().fact());
 
     }
 }
